@@ -18,4 +18,4 @@ Please ensure you have installed and/or created the below:
 
 - cd we-connect-php
 - composer install (if required)
-- docker-compose up -d
+- docker-compose up --build -d
