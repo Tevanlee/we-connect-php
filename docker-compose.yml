@@ -1,0 +1,42 @@
+services:
+  app:
+    build: .
+    container_name: we_connect_app
+    ports:
+      - "8000:80" # visit http://localhost:8000
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: we_connect_db
+
+  db:
+    image: mysql:8.0
+    container_name: we_connect_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: we_connect_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/we_connect_db.sql:/docker-entrypoint-initdb.d/we_connect_db.sql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: we_connect_phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+
+volumes:
+  db_data:

@@ -1,0 +1,11 @@
+# .gitignore
+# Node & Vue stuff
+node_modules/
+dist/
+.env
+
+# PHP & Docker stuff
+vendor/
+.env
+database/
+*.sql
