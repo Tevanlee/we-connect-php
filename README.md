@@ -1,6 +1,6 @@
 # WeConnect App - Assessment
 
-Please find below the instructions and requirement to run and test the application
+Please find below the instructions and requirements to run and test the application
 
 - Backend: REST API using PHP + MySQL, containerized with Docker
 - Includes phpMyAdmin
