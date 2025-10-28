@@ -7,9 +7,10 @@ Please find below the instructions and requirements to run and test the applicat
 
 ---
 
-Please ensure you have installed the below:
+Please ensure you have installed and/or created the below:
 
 - Docker
+- .env file
 
 ---
 
