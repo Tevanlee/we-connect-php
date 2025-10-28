@@ -37,6 +37,7 @@ services:
       PMA_HOST: db
       PMA_USER: root
       PMA_PASSWORD: root
+    platform: linux/amd64
 
 volumes:
   db_data:

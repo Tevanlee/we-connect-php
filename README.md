@@ -16,4 +16,5 @@ Please ensure you have installed the below:
 # Setup Backend - Terminal
 
 - cd we-connect-php
+- composer install (if required)
 - docker-compose up -d
